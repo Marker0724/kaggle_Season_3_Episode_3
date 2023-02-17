@@ -39,6 +39,8 @@ ibm = pd.read_csv(data_path + 'WA_Fn-UseC_-HR-Employee-Attrition.csv')
 
 - 모델 성능 향상 데이터 추가
 - https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset
+- train.shape : (1677, 34)
+- test.shape : (1119, 33)
 
 ## 불필요 데이터 삭제
 ```
@@ -83,9 +85,8 @@ test.drop(columns=['Over18', 'EmployeeCount', 'StandardHours'], inplace=True, er
 |30|	Attrition|	int64|	0|	2|	0|	0|	0|
 
 
-  - train.shape : (3147, 31)
+  - train.shape : (1677, 31)
   - test.shape : (1119, 30)
-
 
 - 시각화 결과는 .ipynb 파일 참고
 
@@ -103,6 +104,8 @@ ibm = ibm[list(train.columns)]
 # train + ibm 
 train = pd.concat([train, ibm]).reset_index(drop=True)
 ```
+  - train.shape : (3147, 31)
+  - test.shape : (1119, 30)
 
 ### 불필요한 데이터  삭제 및 순서형 데이터 정렬
 
