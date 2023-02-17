@@ -99,7 +99,7 @@ ibm = ibm[list(train.columns)]
 train = pd.concat([train, ibm]).reset_index(drop=True)
 ```
 
-### 불필요한 데이터 삭제 및 순서형 데이터 정렬
+### 불필요한 데이터  삭제 및 순서형 데이터 정렬
 
 ```
 
