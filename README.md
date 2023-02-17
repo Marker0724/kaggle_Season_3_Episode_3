@@ -1,6 +1,8 @@
 # Sk Shieldus Rookies 머신러닝 미니 프로젝트 (5조)
 
 ## Kaggle Season 3, Episode 3
+- Tabular Classification with an Employee Attrition Dataset
+- https://www.kaggle.com/competitions/playground-series-s3e3
 
 - 실행 환경
   - Google Colab
