@@ -207,4 +207,4 @@ final_preds = np.column_stack([xgb_preds, xgb_preds,
 ```
 # 최종 결과
 
-Private Score : 0.90407
+Private Score : 0.90407 (1)
