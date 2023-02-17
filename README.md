@@ -40,7 +40,7 @@ ibm = pd.read_csv(data_path + 'WA_Fn-UseC_-HR-Employee-Attrition.csv')
 - 모델 성능 향상 데이터 추가
 - https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset
 
-## 불필요 데이터 
+## 불필요 데이터 삭제
 ```
 train.drop(columns=['Over18', 'EmployeeCount', 'StandardHours'], inplace=True, errors='ignore')
 test.drop(columns=['Over18', 'EmployeeCount', 'StandardHours'], inplace=True, errors='ignore')
