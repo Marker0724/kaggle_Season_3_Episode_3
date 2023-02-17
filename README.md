@@ -33,7 +33,6 @@ submission = pd.read_csv(data_path + 'sample_submission.csv',index_col='id')
 
 # 다운받아서 불러옴
 ibm = pd.read_csv(data_path + 'WA_Fn-UseC_-HR-Employee-Attrition.csv')
-ibm.head(2)
 ```
 
 - 모델 성능 향상 데이터 추가
