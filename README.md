@@ -40,6 +40,12 @@ ibm = pd.read_csv(data_path + 'WA_Fn-UseC_-HR-Employee-Attrition.csv')
 - 모델 성능 향상 데이터 추가
 - https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset
 
+## 불필요 데이터 
+```
+train.drop(columns=['Over18', 'EmployeeCount', 'StandardHours'], inplace=True, errors='ignore')
+test.drop(columns=['Over18', 'EmployeeCount', 'StandardHours'], inplace=True, errors='ignore')
+```
+
 ### train 데이터
 
 ||feature_name|	type|	결측값수|	고유값수|	샘플값 0|	샘플값 1|	샘플값 2|
@@ -96,12 +102,11 @@ train = pd.concat([train, ibm]).reset_index(drop=True)
 ### 불필요한 데이터 삭제 및 순서형 데이터 정렬
 
 ```
-# 고유값 1개 피처 삭제
-train.drop(columns=['Over18', 'EmployeeCount', 'StandardHours'], inplace=True, errors='ignore')
-test.drop(columns=['Over18', 'EmployeeCount', 'StandardHours'], inplace=True, errors='ignore')
 
 # 이상치 제거
 train.drop(train[train['JobLevel']==7].index.tolist() , inplace=True, errors='ignore')
+# DailyRate와 Education에 이상치 제거 (train만, test에는 해당 이상치 없음)
+train.drop([527, 1398], inplace=True)
 
 # 순서형 데이터 정렬
 ord_1 = ['Non-Travel', 'Travel_Rarely', 'Travel_Frequently']
