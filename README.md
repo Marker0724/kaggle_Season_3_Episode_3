@@ -83,8 +83,8 @@ test.drop(columns=['Over18', 'EmployeeCount', 'StandardHours'], inplace=True, er
 |30|	Attrition|	int64|	0|	2|	0|	0|	0|
 
 
-train.shape : (3147, 31)
-test.shape : (1119, 30)
+  - train.shape : (3147, 31)
+  - test.shape : (1119, 30)
 
 
 - 시각화 결과는 .ipynb 파일 참고
