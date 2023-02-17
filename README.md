@@ -179,8 +179,7 @@ test[num_datas] = scaler.transform(test[num_datas])
 
 ## Modeling
 
-- 베이스 라인 구축 생략 (Logistic 사용 X)
-- CatBoost 모델 사용
+- 최종 CatBoost 모델 사용
 
 ```
 X = train.drop('Attrition', axis=1)
